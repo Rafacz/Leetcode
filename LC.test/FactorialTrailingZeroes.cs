@@ -38,7 +38,7 @@
 			int expected = 0;
 
 			// Act
-			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input); // 0
+			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input);
 
 			// Assert
 			Assert.Equal(expected, result);
@@ -52,7 +52,7 @@
 			int expected = 1;
 
 			// Act
-			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input); // 0
+			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input);
 
 			// Assert
 			Assert.Equal(expected, result);
@@ -66,7 +66,7 @@
 			int expected = 2;
 
 			// Act
-			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input); // 0
+			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input);
 
 			// Assert
 			Assert.Equal(expected, result);
@@ -80,7 +80,7 @@
 			int expected = 7;
 
 			// Act
-			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input); // 0
+			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input);
 
 			// Assert
 			Assert.Equal(expected, result);
@@ -95,7 +95,7 @@
 			int expected = 12;
 
 			// Act
-			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input); // 0
+			int result = LC.FactorialTrailingZeroes.TrailingZeroes(input);
 
 			// Assert
 			Assert.Equal(expected, result);
