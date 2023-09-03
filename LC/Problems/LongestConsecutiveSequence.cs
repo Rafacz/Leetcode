@@ -8,29 +8,28 @@
 
 			var hs = new HashSet<int>(nums);
 
-			int num = hs.Min();
-			int highest = hs.Max();
+			int result = 1;
 			int max = 1;
 
-			int result = default;
-
-			while (num <= highest)
+			foreach (var val in hs)
 			{
-				if (hs.Contains(num = num + 1))
+				int num = val;
+				while (true)
 				{
-					max++;
-				}
-				else
-				{
-					if (max > result)
+					if (hs.Contains(num = num + 1))
 					{
-						result = max;
-						if (result > nums.Length / 2)
-						{
-							return result;
-						}
+						max++;
 					}
-					max = 0;
+					else
+					{
+						if (max > result)
+						{
+							result = max;
+							max = 1;
+						}
+						max = 1;
+						break;
+					}
 				}
 			}
 
