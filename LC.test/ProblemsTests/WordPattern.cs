@@ -46,5 +46,20 @@
 			// Assert
 			Assert.Equal(expectedOutput, actualOutput);
 		}
+
+		[Fact]
+		public void TestPatternMatching_Example4()
+		{
+			// Arrange
+			string pattern = "abba";
+			string s = "dog dog dog dog";
+			bool expectedOutput = false;
+
+			// Act
+			bool actualOutput = LC.Problems.WordPattern.WordPatterns(pattern, s);
+
+			// Assert
+			Assert.Equal(expectedOutput, actualOutput);
+		}
 	}
 }
