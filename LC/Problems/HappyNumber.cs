@@ -1,42 +1,21 @@
-﻿using System.Text;
-
-namespace LC.Problems
+﻿namespace LC.Problems
 {
 	//202. Happy Number
 	public static class HappyNumber
 	{
 		public static bool IsHappy(int n)
 		{
+			var hs = new HashSet<int>();
 
-			throw new OutOfMemoryException();
-
-			StringBuilder input = new StringBuilder(n.ToString());
-			StringBuilder newInput = new StringBuilder(n);
-
-			long result = 0;
-
-			while (result != 1)
+			while (n != 1)
 			{
-				for (int i = 0; i < input.Length; i++)
-				{
-					long output = int.Parse(input[i].ToString()) * int.Parse(input[i].ToString());
-					result += output;
-				}
-
-				input = new StringBuilder(newInput.Length);
-				input.Append(result.ToString());
-
-				if (result == 4)
+				if (hs.Contains(n))
 				{
 					return false;
 				}
 
-				if (result == 1)
-				{
-					break;
-				}
-
-				result = 0;
+				hs.Add(n);
+				n = n.ToString().Select(x => int.Parse(x.ToString())).Sum(x => x * x);
 			}
 
 			return true;
