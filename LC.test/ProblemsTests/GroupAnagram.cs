@@ -7,7 +7,7 @@
 		{
 			// Arrange
 			string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
-			string[][] expectedOutput = { new string[] { "bat" }, new string[] { "nat", "tan" }, new string[] { "ate", "eat", "tea" } };
+			string[][] expectedOutput = { new string[] { "eat", "tea", "ate" }, new string[] { "tan", "nat" }, new string[] { "bat" } };
 
 			// Act
 			var result = Problems.GroupAnagram.GroupAnagrams(strs);
