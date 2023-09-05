@@ -4,32 +4,36 @@
 	{
 		public static int LongestConsecutive(int[] nums)
 		{
-			if (nums == null || nums.Length == 0) return 0;
+			var items = new HashSet<int>(nums);
 
-			var hs = new HashSet<int>(nums);
-
-			int result = 1;
-			int max = 1;
-
-			foreach (var val in hs)
+			var result = 0;
+			var used = new HashSet<int>();
+			foreach (var item in items)
 			{
-				int num = val;
-				while (true)
+				if (used.Contains(item)) { continue; }
+
+				var current = item;
+				var length = 1;
+				used.Add(current);
+
+				while (items.Contains(current - 1))
 				{
-					if (hs.Contains(num = num + 1))
-					{
-						max++;
-					}
-					else
-					{
-						if (max > result)
-						{
-							result = max;
-							max = 1;
-						}
-						max = 1;
-						break;
-					}
+					length++;
+					used.Add(current - 1);
+					current--;
+				}
+
+				current = item;
+				while (items.Contains(current + 1))
+				{
+					length++;
+					used.Add(current + 1);
+					current++;
+				}
+
+				if (length > result)
+				{
+					result = length;
 				}
 			}
 
