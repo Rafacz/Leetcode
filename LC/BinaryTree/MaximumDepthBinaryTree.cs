@@ -1,5 +1,6 @@
 ﻿namespace LC.BinaryTree
 {
+	//104. Maximum Depth of Binary Tree
 	public static class MaximumDepthBinaryTree
 	{
 		public static int MaxDepth(TreeNode root)
@@ -22,19 +23,6 @@
 			}
 
 			return max;
-		}
-	}
-
-	public class TreeNode
-	{
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-		{
-			this.val = val;
-			this.left = left;
-			this.right = right;
 		}
 	}
 }
