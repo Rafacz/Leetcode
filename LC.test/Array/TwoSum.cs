@@ -1,4 +1,4 @@
-﻿namespace LC.test.ProblemsTests
+﻿namespace LC.test.Array
 {
 	public class TwoSum
 	{
@@ -9,7 +9,7 @@
 			// Arrange
 			int[] nums = { 2, 7, 11, 15 };
 			int target = 9;
-			int[] result = Problems.TwoSum.TwoSums(nums, target);
+			int[] result = Arrays.TwoSum.TwoSums(nums, target);
 
 			// Act & Assert
 			Assert.Equal(new int[] { 0, 1 }, result);
@@ -21,7 +21,7 @@
 			// Arrange
 			int[] nums = { 3, 2, 4 };
 			int target = 6;
-			int[] result = Problems.TwoSum.TwoSums(nums, target);
+			int[] result = Arrays.TwoSum.TwoSums(nums, target);
 
 			// Act & Assert
 			Assert.Equal(new int[] { 1, 2 }, result);
@@ -33,7 +33,7 @@
 			// Arrange
 			int[] nums = { 3, 3 };
 			int target = 6;
-			int[] result = Problems.TwoSum.TwoSums(nums, target);
+			int[] result = Arrays.TwoSum.TwoSums(nums, target);
 
 			// Act & Assert
 			Assert.Equal(new int[] { 0, 1 }, result);
