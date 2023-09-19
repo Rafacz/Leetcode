@@ -1,4 +1,4 @@
-﻿namespace LC.Problems
+﻿namespace LC.Arrays
 {
 	//219. Contains Duplicate II
 	public static class ContainsDuplicateII

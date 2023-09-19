@@ -1,4 +1,4 @@
-﻿namespace LC.test.ProblemsTests
+﻿namespace LC.test.Array
 {
 	public class ContainsDuplicateII
 	{
@@ -10,7 +10,7 @@
 			int k = 3;
 
 			// Act
-			bool result = Problems.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
+			bool result = Arrays.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
 
 			// Assert
 			Assert.True(result);
@@ -24,7 +24,7 @@
 			int k = 1;
 
 			// Act
-			bool result = Problems.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
+			bool result = Arrays.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
 
 			// Assert
 			Assert.True(result);
@@ -38,7 +38,7 @@
 			int k = 2;
 
 			// Act
-			bool result = Problems.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
+			bool result = Arrays.ContainsDuplicateII.ContainsNearbyDuplicate(nums, k);
 
 			// Assert
 			Assert.False(result);
